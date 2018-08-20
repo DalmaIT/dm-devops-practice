@@ -1,0 +1,533 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TLS/SSL · DalmaIT DevOps 实践</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yuanzhen Zhou<joe@dalmait.com>">
+        <meta name="identifier" content="tbd" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gpg.html" />
+    
+    
+    <link rel="prev" href="password.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://dmdop.dalmait.com" target="_blank" class="custom-link">DalmaIT DevOps 实践</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://www.dalmait.com" target="_blank" class="custom-link">DalmaIT 官网</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../author.html">
+            
+                <a href="../author.html">
+            
+                    
+                    作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../devops/devops-intro.html">
+            
+                <a href="../devops/devops-intro.html">
+            
+                    
+                    引子 什么是 DevOps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../workspace/workspace.html">
+            
+                <a href="../workspace/workspace.html">
+            
+                    
+                    开始 环境篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../workspace/common-env.html">
+            
+                <a href="../workspace/common-env.html">
+            
+                    
+                    通用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../workspace/devops-env.html">
+            
+                <a href="../workspace/devops-env.html">
+            
+                    
+                    DevOps环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../workspace/develop-env.html">
+            
+                <a href="../workspace/develop-env.html">
+            
+                    
+                    开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../arch/arch.html">
+            
+                <a href="../arch/arch.html">
+            
+                    
+                    谈谈架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../infrastructure/infrastructure.html">
+            
+                <a href="../infrastructure/infrastructure.html">
+            
+                    
+                    Infrastructure 基础设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../cm/cm.html">
+            
+                <a href="../cm/cm.html">
+            
+                    
+                    CM 配置管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../cicd/cicd.html">
+            
+                <a href="../cicd/cicd.html">
+            
+                    
+                    CICD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../datastores/datastores.html">
+            
+                <a href="../datastores/datastores.html">
+            
+                    
+                    Datastores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../service/container-cloud-native.html">
+            
+                <a href="../service/container-cloud-native.html">
+            
+                    
+                    容器与云原生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../observability/observability.html">
+            
+                <a href="../observability/observability.html">
+            
+                    
+                    Observability 观察性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../operation/operation.html">
+            
+                <a href="../operation/operation.html">
+            
+                    
+                    Oncall & Trouble Shooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../sre/sre.html">
+            
+                <a href="../sre/sre.html">
+            
+                    
+                    SRE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="password.html">
+            
+                <a href="password.html">
+            
+                    
+                    密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14.2" data-path="tls-ssl.html">
+            
+                <a href="tls-ssl.html">
+            
+                    
+                    TLS/SSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="gpg.html">
+            
+                <a href="gpg.html">
+            
+                    
+                    GPG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="data.html">
+            
+                <a href="data.html">
+            
+                    
+                    数据安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../end.html">
+            
+                <a href="../end.html">
+            
+                    
+                    写在最后
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >TLS/SSL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tls--ssl">TLS / SSL</h1>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright: <a href="http://www.dalmait.com" target="_blank">DalmaIT</a> @2014-2018 <img src="http://cdn.dalmait.com/logo16x16.png" alt="logo"> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>&#x6700;&#x540E;&#x66F4;&#x65B0;:</i> 2018-08-20 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="password.html" class="navigation navigation-prev " aria-label="Previous page: 密码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gpg.html" class="navigation navigation-next " aria-label="Next page: GPG">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TLS/SSL","level":"1.14.2","depth":2,"next":{"title":"GPG","level":"1.14.3","depth":2,"path":"security/gpg.md","ref":"security/gpg.md","articles":[]},"previous":{"title":"密码","level":"1.14.1","depth":2,"path":"security/password.md","ref":"security/password.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sitemap","page-footer-ex"],"root":".","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"sitemap":{"hostname":"http://dmdop.dalmait.com"},"page-footer-ex":{"copyright":"Copyright: [DalmaIT](http://www.dalmait.com) @2014-2018 ![logo](http://cdn.dalmait.com/logo16x16.png)","markdown":true,"update_format":"YYYY-MM-DD","update_label":"<i>最后更新:</i>"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","twitter","weibo","weibo","instapaper"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yuanzhen Zhou<joe@dalmait.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"tbd","variables":{},"title":"DalmaIT DevOps 实践","language":"zh-hans","links":{"sidebar":{"DalmaIT DevOps 实践":"http://dmdop.dalmait.com","DalmaIT 官网":"http://www.dalmait.com"}},"gitbook":">=3.0.0","description":"《DalmaIT DevOps 实践》是一本开源的 DevOps 实践指导教程，全面介绍 DevOps 落地实施的参考。Aka: DalmaIT DevOps 实践 101"},"file":{"path":"security/tls-ssl.md","mtime":"2018-08-20T08:21:05.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-20T08:32:17.751Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
